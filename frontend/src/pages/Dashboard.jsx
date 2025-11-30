@@ -2058,7 +2058,7 @@ const renderConfiguracoes = () => (
 
               <div>
                 <label className="block text-sm mb-2 font-medium">Valor (R$)</label>
-                <MoneyInput
+                <input
   value={formRapido.valor}
   onChange={(valor) => setFormRapido({...formRapido, valor})}
   className="w-full bg-gray-700 border-2 border-gray-600 rounded-xl py-4 text-2xl font-bold text-center focus:border-blue-500 focus:outline-none min-h-[60px]"
@@ -2217,7 +2217,7 @@ const renderConfiguracoes = () => (
 
               <div>
                 <label className="block text-sm mb-2 font-medium">Valor Total (R$)</label>
-                <MoneyInput
+                <input
   value={formCaixinha.valor_total}
   onChange={(valor) => setFormCaixinha({...formCaixinha, valor_total: valor})}
   className="w-full bg-gray-700 border-2 border-gray-600 rounded-xl py-4 text-lg focus:border-blue-500 focus:outline-none min-h-[52px]"
