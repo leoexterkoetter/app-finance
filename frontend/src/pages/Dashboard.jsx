@@ -2058,12 +2058,13 @@ const renderConfiguracoes = () => (
 
               <div>
                 <label className="block text-sm mb-2 font-medium">Valor (R$)</label>
-                <input
-  value={formRapido.valor}
-  onChange={(valor) => setFormRapido({...formRapido, valor})}
-  className="w-full bg-gray-700 border-2 border-gray-600 rounded-xl py-4 text-2xl font-bold text-center focus:border-blue-500 focus:outline-none min-h-[60px]"
-  placeholder="0,00"
-  autoFocus
+               <input 
+  type="number" 
+  step="0.01" 
+  min="0" 
+  value={formRapido.valor} 
+  onChange={(e) => setFormRapido({...formRapido, valor: e.target.value})}
+  placeholder="0.00"
 />
               </div>
 
@@ -2217,11 +2218,13 @@ const renderConfiguracoes = () => (
 
               <div>
                 <label className="block text-sm mb-2 font-medium">Valor Total (R$)</label>
-                <input
-  value={formCaixinha.valor_total}
-  onChange={(valor) => setFormCaixinha({...formCaixinha, valor_total: valor})}
-  className="w-full bg-gray-700 border-2 border-gray-600 rounded-xl py-4 text-lg focus:border-blue-500 focus:outline-none min-h-[52px]"
-  placeholder="0,00"
+                <input 
+  type="number" 
+  step="0.01" 
+  min="0" 
+  value={formCaixinha.valor_total} 
+  onChange={(e) => setFormCaixinha({...formCaixinha, valor_total: e.target.value})}
+  placeholder="0.00"
 />
               </div>
 
