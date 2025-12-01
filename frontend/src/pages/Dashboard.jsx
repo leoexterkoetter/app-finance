@@ -3,9 +3,11 @@ import {
   parseCurrencyInput, 
   MAX_VALOR, 
   formatCurrencyInput 
-} from './utils/formatters';
+} from '../utils/formatters.js';
+
 import React, { useState, useEffect, useMemo } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+
 import {
   PlusCircle, TrendingUp, TrendingDown, DollarSign, Filter, Download, Edit2, Trash2, X,
   Home, CreditCard, Car, ShoppingCart, Pill, Zap, Wifi, Smartphone, Music, CheckCircle,
@@ -13,13 +15,22 @@ import {
   Sun, Moon, Settings, Tag, Palette,
   Coffee, Book, Dumbbell, Plane, Gift, Heart, Briefcase, Gamepad2, Pizza, Film, Shirt, Wrench
 } from 'lucide-react';
-import ModalCategoria from './components/ModalCategoria';
-import ModalConta from './components/ModalConta';
-import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, PieChart, Pie, Legend } from 'recharts';
-import DateSelector from './components/DateSelector';
-import InsightCard from './components/InsightCard';
-import LoadingSpinner from './components/LoadingSpinner';
-import { exportarPDF } from './services/pdfExport';
+
+// ✔ Correções dos imports de components (agora usando ../components)
+import ModalCategoria from '../components/ModalCategoria.jsx';
+import ModalConta from '../components/ModalConta.jsx';
+import DateSelector from '../components/DateSelector.jsx';
+import InsightCard from '../components/InsightCard.jsx';
+import LoadingSpinner from '../components/LoadingSpinner.jsx';
+
+import { 
+  LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
+  ResponsiveContainer, Cell, PieChart, Pie, Legend 
+} from 'recharts';
+
+// ✔ Correção do services
+import { exportarPDF } from '../services/pdfExport.js';
+
 
 
 const API_URL = 'https://finance-backend-production-8578.up.railway.app';
